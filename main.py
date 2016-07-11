@@ -212,10 +212,10 @@ def predict(data=None, out_saved=None, model_saved=None, fold=None, y_max=None):
 
 
 if __name__ == '__main__':
-    data = ['Data/dataCorn_WW_flf_geno_nolabel_biner.csv', 'Data/dataCorn_WW_flf_feno_nolabel.csv']
+    data = ['Xnolabel.csv', 'ynolabel.csv']
     waktu_eksekusi = strftime("%d-%m-%Y(%H.%M)")
-    filename_out = 'doc deepbeliefregression/output_FLF_WW_jagung-' + waktu_eksekusi + '.txt'
-    filename_model = 'doc deepbeliefregression/best_modelDBR_FLF_WW_jagung' + waktu_eksekusi + '.pkl'
+    filename_out = 'output-' + waktu_eksekusi + '.txt'
+    filename_model = 'best_model' + waktu_eksekusi + '.pkl'
     kf = KFold(284, n_folds=10, shuffle=True)
     fold = 0
     for train_index, test_index in kf:
